@@ -4,13 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "react-scripts start",
     "dev": "vite",
-    "build": "react-scripts build",
-  "test": "react-scripts test",
-  "eject": "react-scripts eject",
-    "preview": "vite preview",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
     "firebase": "^12.5.0",
