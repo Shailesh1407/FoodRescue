@@ -1,0 +1,228 @@
+/* Index.css */
+
+/* Root Colors */
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(160, 15%, 15%);
+
+  --primary: hsl(142, 76%, 36%);
+  --primary-foreground: hsl(0, 0%, 100%);
+
+  --accent: hsl(38, 92%, 50%);
+  --success: hsl(142, 76%, 36%);
+  --muted: hsl(142, 10%, 96%);
+  --muted-foreground: hsl(160, 5%, 45%);
+  --gradient-hero: linear-gradient(
+    135deg,
+    hsl(142, 76%, 36%) 0%,
+    hsl(168, 76%, 42%) 50%,
+    hsl(38, 92%, 50%) 100%
+  );
+  --gradient-primary: linear-gradient(135deg, hsl(142, 76%, 36%), hsl(168, 76%, 42%));
+  --gradient-accent: linear-gradient(135deg, hsl(38, 92%, 50%), hsl(25, 95%, 53%));
+}
+
+/* General Layout */
+.index-container {
+  min-height: 100vh;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', sans-serif;
+}
+
+.hero-section {
+  position: relative;
+  padding: 5rem 1rem;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-hero);
+  opacity: 0.9;
+  z-index: 0;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.hero-title .highlight {
+  color: var(--primary);
+  display: block;
+}
+
+.hero-text {
+  font-size: 1.25rem;
+  color: var(--muted-foreground);
+  max-width: 36rem;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hero-buttons a button {
+  min-width: 180px;
+  font-weight: 600;
+}
+
+/* Stats Card */
+.stats-card {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(5px);
+  border: 2px solid var(--primary);
+  padding: 2rem;
+  max-width: 24rem;
+}
+
+.stats-card .stat {
+  text-align: center;
+}
+
+.stats-card .stat-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.5rem;
+}
+
+.stats-card .stat-icon.primary {
+  background-color: var(--primary);
+  opacity: 0.1;
+}
+
+.stats-card .stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.stats-card .stat-label {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+/* Features Section */
+.features-section {
+  padding: 5rem 1rem;
+  background-color: rgba(217, 239, 229, 0.3); /* Muted background */
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.feature-card {
+  padding: 2rem;
+  transition: all 0.3s ease;
+  border-radius: 1rem;
+}
+
+.feature-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.feature-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Call to Action Section */
+.cta-section {
+  padding: 5rem 1rem;
+  text-align: center;
+  background: var(--gradient-primary);
+  border-radius: 2rem;
+  color: var(--primary-foreground);
+}
+
+.cta-section h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.cta-buttons a button {
+  min-width: 180px;
+}
+
+/* Coming Soon / AI Features */
+.ai-features {
+  padding: 5rem 1rem;
+  background-color: rgba(217, 239, 229, 0.3);
+}
+
+.ai-card {
+  padding: 2rem;
+  border: 2px dashed;
+  border-radius: 1rem;
+}
+
+.ai-card.primary {
+  border-color: var(--primary);
+  background-color: rgba(20, 153, 89, 0.05); /* primary/5 */
+}
+
+.ai-card.accent {
+  border-color: var(--accent);
+  background-color: rgba(255, 212, 0, 0.05); /* accent/5 */
+}
+
+.ai-card .label {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}

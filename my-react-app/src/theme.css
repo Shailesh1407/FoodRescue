@@ -1,0 +1,38 @@
+:root {
+  --background: 255 255 255;
+  --foreground: 15 23 42;
+  --card: 255 255 255;
+  --card-foreground: 15 23 42;
+  --border: 226 232 240;
+  --input: 241 245 249;
+  --primary: 59 130 246;
+  --primary-foreground: 255 255 255;
+  --secondary: 244 244 245;
+  --secondary-foreground: 15 23 42;
+  --accent: 168 85 247;
+  --accent-foreground: 255 255 255;
+  --muted-foreground: 107 114 128;
+}
+
+.bg-gradient-primary {
+  background-image: linear-gradient(to right, rgb(59 130 246), rgb(168 85 247));
+}
+
+.shadow-primary {
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+}
+
+/* Support Tailwind variable colors */
+@layer utilities {
+  .bg-background { background-color: rgb(var(--background)); }
+  .bg-card { background-color: rgb(var(--card)); }
+  .bg-primary { background-color: rgb(var(--primary)); }
+  .bg-accent { background-color: rgb(var(--accent)); }
+  .bg-secondary { background-color: rgb(var(--secondary)); }
+
+  .text-muted-foreground { color: rgb(var(--muted-foreground)); }
+  .text-primary { color: rgb(var(--primary)); }
+  .text-accent { color: rgb(var(--accent)); }
+
+  .border-border { border-color: rgb(var(--border)); }
+}
